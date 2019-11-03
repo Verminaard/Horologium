@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+   <changeSet id="Init schema" author="baryshnikov-oi-180801">
+      <tagDatabase tag="Version 1"/>
+   </changeSet>
+
+   <include file="db/migrations/v-0.0.1/2018-12-07--01-initial-schema.sql"/>
+   <include file="db/migrations/v-0.0.1/2018-12-08--02-initial-data.sql"/>
+   <include file="db/migrations/v-0.0.1/2019-03-14--03-form-control-schema.sql"/>
+   <include file="db/migrations/v-0.0.1/2019-03-20--04-database-refactor.sql"/>
+   <include file="db/migrations/v-0.0.1/2019-04-19--05-license-test-data.sql"/>
+
+</databaseChangeLog>

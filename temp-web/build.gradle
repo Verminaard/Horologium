@@ -1,16 +1,29 @@
 plugins {
-    id 'java'
-}
-
-group 'me.youdontfind'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+    id "org.springframework.boot" version "2.1.7.RELEASE"
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation project(':temp-client')
+    implementation project(':temp-core')
+    implementation project(':temp-entities')
+    implementation project(':temp-utils')
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    compile "org.liquibase:liquibase-core:3.6.2"
+    compile "mysql:mysql-connector-java:6.0.6"
+}
+
+bootRun {
+    def br = delegate
+    Properties p = new Properties()
+    def file = project.rootProject.file('local-boot.properties')
+    if(file.exists()){
+        p.load(file.newDataInputStream())
+        p.entrySet().each { e ->
+            logger.lifecycle "local spring-boot property $e.key = $e.value"
+            br.systemProperty e.key, e.value
+        }
+    }
+    systemProperty "app.version", project.version
 }
