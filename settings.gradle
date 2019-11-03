@@ -1,6 +1,5 @@
 rootProject.name = 'SpringAndReactAppTemplate'
 include 'temp-core'
-include 'temp-client'
 include 'temp-web'
 include 'temp-entities'
 include 'temp-utils'

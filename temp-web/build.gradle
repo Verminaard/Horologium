@@ -3,7 +3,6 @@ plugins {
 }
 
 dependencies {
-    implementation project(':temp-client')
     implementation project(':temp-core')
     implementation project(':temp-entities')
     implementation project(':temp-utils')
