@@ -1,0 +1,29 @@
+plugins {
+    id "org.springframework.boot" version "2.1.7.RELEASE"
+}
+
+dependencies {
+    implementation project(':horologium-core')
+    implementation project(':horologium-entities')
+    implementation project(':horologium-utils')
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    
+    compile "org.liquibase:liquibase-core:3.6.2"
+    compile "mysql:mysql-connector-java"
+}
+
+bootRun {
+    def br = delegate
+    Properties p = new Properties()
+    def file = project.rootProject.file('local-boot.properties')
+    if(file.exists()){
+        p.load(file.newDataInputStream())
+        p.entrySet().each { e ->
+            logger.lifecycle "local spring-boot property $e.key = $e.value"
+            br.systemProperty e.key, e.value
+        }
+    }
+    systemProperty "app.version", project.version
+}

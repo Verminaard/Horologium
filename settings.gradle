@@ -1,6 +1,6 @@
-rootProject.name = 'SpringAndReactAppTemplate'
-include 'temp-core'
-include 'temp-web'
-include 'temp-entities'
-include 'temp-utils'
+rootProject.name = 'Horologium'
+include ':horologium-core'
+include ':horologium-web'
+include ':horologium-entities'
+include ':horologium-utils'
 

@@ -11,6 +11,10 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'java-library'
 
+    sourceCompatibility = 11
+    targetCompatibility = 11
+    compileJava.options.encoding = 'UTF-8'
+    
     repositories {
         jcenter()
     }
