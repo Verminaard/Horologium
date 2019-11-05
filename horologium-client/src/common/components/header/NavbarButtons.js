@@ -7,8 +7,8 @@ const NavbarButtons = ({navbarTabs}) => (
    <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
       {navbarTabs.map((button, index) =>
-      <li className={classNames('nav-item', button.active && 'active')} key={index}>
-         <Link to={button.href} className="nav-link">
+      <li className={classNames('nav-item', button.isActive && 'active')} key={index}>
+         <Link to={button.href} className={classNames('nav-link', button.isActive && 'border-bottom')}>
             {button.label}
          </Link>
          </li>)}

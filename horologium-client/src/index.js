@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import {applyMiddleware, createStore} from 'redux';
 import {Provider} from 'react-redux';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import {composeWithDevTools} from 'redux-devtools-extension';
 
 import logger from 'redux-logger';
@@ -22,7 +22,7 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...mi
 render(
    <BrowserRouter>
       <Provider store={store}>
-            <App/>
+         <Route path="/" component={App}/>
       </Provider>
    </BrowserRouter>,
    document.getElementById('root')
