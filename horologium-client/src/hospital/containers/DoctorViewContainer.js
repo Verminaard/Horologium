@@ -62,7 +62,7 @@ class DoctorViewContainer extends Component {
 
                   <div className="col-md-8 col-xs-12 col-sm-6 col-lg-8">
                      <div className="container border-bottom">
-                        <h3>{doctor.firstName} {doctor.middleName} {doctor.lastName}</h3>
+                        <h3>{doctor.middleName} {doctor.firstName} {doctor.lastName}</h3>
                      </div>
                      <div className="container details">
                         <h6>Специальность: {doctor.speciality && doctor.speciality.name}</h6>
