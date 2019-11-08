@@ -4,6 +4,8 @@ import javassist.NotFoundException;
 import me.youdontfind.bean.hospital.workers.Doctor;
 import me.youdontfind.repositories.DoctorRepository;
 import me.youdontfind.service.hospital.DoctorService;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -19,7 +21,12 @@ public class DoctorServiceImpl implements DoctorService {
 
     @Override
     public Page<Doctor> getAllDoctors(Doctor filterObject, Pageable pageable) {
-        return doctorRepository.findAll(filterObject, pageable);
+        ExampleMatcher matcher = ExampleMatcher.matching()
+                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
+                .withNullHandler(ExampleMatcher.NullHandler.IGNORE)
+                .withIgnorePaths("enabled")
+                .withIgnoreCase();
+        return doctorRepository.findAll(Example.of(filterObject, matcher), pageable);
     }
 
     @Override

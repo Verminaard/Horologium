@@ -5,7 +5,6 @@ plugins {
 dependencies {
     implementation project(':horologium-core')
     implementation project(':horologium-entities')
-    implementation project(':horologium-utils')
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"

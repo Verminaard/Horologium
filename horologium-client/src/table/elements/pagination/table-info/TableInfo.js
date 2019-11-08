@@ -15,11 +15,11 @@ const TableInfo = ({ page, sizePerPage, itemCount }) => {
    let to = Math.min(page * sizePerPage - 1, itemCount);
    if (to >= itemCount) to--;
    return (
-      <p className="padding-top-6">
+      <span className="padding-top-6">
          Записи с <strong>{firstIndex}</strong> по <strong>{to + 1}</strong>
          &nbsp;из <strong>{itemCount}</strong>
-         &nbsp;записей
-      </p>
+         &nbsp;записей;&nbsp;&nbsp;&nbsp;
+      </span>
    );
 };
 

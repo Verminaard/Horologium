@@ -10,7 +10,7 @@ import java.util.StringJoiner;
 @Data
 @MappedSuperclass
 @EqualsAndHashCode(callSuper = true)
-public class Person extends GenericCatalogEntity {
+public class Person extends GenericEntity {
 
     @Column(name = "firstName")
     private String firstName;
@@ -20,6 +20,12 @@ public class Person extends GenericCatalogEntity {
 
     @Column(name = "middleName")
     private String middleName;
+
+    /**
+     * Пометка на удаление
+     */
+    @Column(name = "deleted")
+    private boolean deleted;
 
     @Transient
     public String getFio() {

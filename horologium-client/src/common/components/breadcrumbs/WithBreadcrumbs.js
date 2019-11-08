@@ -1,10 +1,10 @@
 import React, {Fragment} from 'react';
 import Breadcrumbs from "./Breadcrumbs";
 
-const WithBreadcrumbs = (props) => (
+const WithBreadcrumbs = ({breadcrumbs, children}) => (
    <Fragment>
-         <Breadcrumbs breadcrumbs={props.breadcrumbs} />
-                  {props.children}
+         <Breadcrumbs breadcrumbs={breadcrumbs} />
+                  {children}
    </Fragment>
 );
 export default WithBreadcrumbs;

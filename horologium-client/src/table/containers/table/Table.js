@@ -14,16 +14,9 @@ const Table = (props) => (
             />
          <TableBody
             dataList={props.dataList}
-            keyFunction={props.keyFunction}
-            onClickRow={props.onClickRow}
-            selectOptions={props.selectOptions}
-            emptyText={props.emptyText}
             paginationRow={props.paginationRow}
             columns={props.columns}
             readOnly={props.readOnly}
-            getRowClassName={props.getRowClassName}
-            addBtn={props.addBtn}
-            additionalDataRow={props.additionalDataRow}
          />
       </table>
    </div>

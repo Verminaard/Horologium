@@ -30,8 +30,8 @@ const TableBody = (props) => {
          <tbody>
             {rows}
             {paginationRow && (
-               <tr key="pagination">
-                  <td colSpan={columns.length}>{paginationRow}</td>
+               <tr key="pagination" className="bg-white">
+                  <td>{paginationRow}</td>
                </tr>
             )}
          </tbody>

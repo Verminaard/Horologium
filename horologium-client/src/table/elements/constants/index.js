@@ -13,10 +13,10 @@ const CONST_VAR = {
       { id: 10, name: 10 },
       { id: 25, name: 25 },
       { id: 50, name: 50 },
-      { id: 100, name: 100 }
+      { id: 75, name: 75 }
    ],
-   PAGINATION_SIZE: 7,
-   FILTER_DELAY: 800,
+   PAGINATION_SIZE: 5,
+   FILTER_DELAY: 1,
    FILTER_TYPE: {
       TEXT: 'TextFilter',
       REGEX: 'RegexFilter',

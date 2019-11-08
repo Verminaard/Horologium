@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import uniqueId from 'lodash/uniqueId';
-/**
- * Компонент-обертка для простого select, не требует внешних зависимостей
- * */
+import {isEmpty} from "lodash";
+
 class SimpleSelect extends Component {
    constructor(props, context) {
       super(props, context);
@@ -32,9 +31,9 @@ class SimpleSelect extends Component {
             id={id}
             onChange={this.handleChange}
             value={this.state.value}
-            placeholder={placeholder || 'Выберите из списка...'}>
+            placeholder={placeholder}>
             {!notClearableOptions && <option />}
-            {options &&
+            {!isEmpty(options) &&
                options.map((option, index) => (
                   <option key={uniqueId()} value={option[idType || 'id']}>
                      {option[valueType || 'name']}

@@ -10,7 +10,7 @@ const PageButton = ({ active, disable, hidden, changePage, children }) => {
    });
    return (
       <li className={classes}>
-         <a
+         <a href="#"
             onClick={(e) => {
                e.preventDefault();
                changePage(e.currentTarget.textContent);

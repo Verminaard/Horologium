@@ -5,8 +5,10 @@ import logoImg from './assets/img/horoLogo.png';
 import Navbar from "./common/components/header/Navbar";
 import NotificationContainer from "./common/components/notifications/NotificationContainer";
 import {Route, Switch} from "react-router-dom";
-import SpecialityContainer from "./speciality/containers/SpecialityContainer";
+import SpecialityViewListContainer from "./hospital/containers/SpecialityViewListContainer";
 import LandingPage from "./landingPage/LandingPage";
+import DoctorViewListContainer from "./hospital/containers/DoctorViewListContainer";
+import DoctorViewContainer from "./hospital/containers/DoctorViewContainer";
 
 class App extends Component {
    constructor(props, context) {
@@ -33,8 +35,10 @@ class App extends Component {
             <Switch>
                <Fragment>
                   <Route exact path="/" component={LandingPage} />
-                  <Route exact path="/doctors" component={<h>nothing</h>} />
-                  <Route exact path="/speciality" component={SpecialityContainer} />
+                  <Route exact path="/doctors" render={()=><DoctorViewListContainer filterable noAction defaultView/>}/>
+                  <Route exact path="/speciality" component={SpecialityViewListContainer} />
+                  <Route exact path="/speciality/:speciality/showDoctors" component={DoctorViewListContainer} />
+                  <Route exact path="/speciality/:speciality/showDoctors/:id/show/" component={DoctorViewContainer} />
                </Fragment>
             </Switch>
             <NotificationContainer/>

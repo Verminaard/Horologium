@@ -2,5 +2,3 @@ rootProject.name = 'Horologium'
 include ':horologium-core'
 include ':horologium-web'
 include ':horologium-entities'
-include ':horologium-utils'
-

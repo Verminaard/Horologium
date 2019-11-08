@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import SimpleSelect from '../../../../form/elements/simple/select/simple/SimpleSelect';
+import SimpleSelect from "../../pagination/size-per-page/SimpleSelect";
 
 class SelectTableFilter extends Component {
    constructor(props, context) {
@@ -17,11 +16,10 @@ class SelectTableFilter extends Component {
 
    render() {
       const { id, className, optionList, idType, valueType, placeholder } = this.props;
-
       return (
          <SimpleSelect
             className={className || 'input-filter form-control'}
-            placeholder={placeholder || 'Выберите статус из списка...'}
+            placeholder={placeholder || 'Выберите из списка...'}
             options={optionList}
             idType={idType}
             valueType={valueType}
@@ -31,18 +29,5 @@ class SelectTableFilter extends Component {
       );
    }
 }
-
-SelectTableFilter.propTypes = {
-   optionList: PropTypes.arrayOf(
-      PropTypes.shape({
-         idType: PropTypes.string,
-         valueType: PropTypes.string
-      })
-   ),
-   id: PropTypes.string,
-   className: PropTypes.string,
-   placeholder: PropTypes.string,
-   onChange: PropTypes.func
-};
 
 export default SelectTableFilter;

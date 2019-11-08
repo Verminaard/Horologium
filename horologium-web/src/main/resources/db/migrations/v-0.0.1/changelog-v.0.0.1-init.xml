@@ -8,10 +8,7 @@
       <tagDatabase tag="Version 1"/>
    </changeSet>
 
-   <include file="db/migrations/v-0.0.1/2018-12-07--01-initial-schema.sql"/>
-   <include file="db/migrations/v-0.0.1/2018-12-08--02-initial-data.sql"/>
-   <include file="db/migrations/v-0.0.1/2019-03-14--03-form-control-schema.sql"/>
-   <include file="db/migrations/v-0.0.1/2019-03-20--04-database-refactor.sql"/>
-   <include file="db/migrations/v-0.0.1/2019-04-19--05-license-test-data.sql"/>
+   <include file="db/migrations/v-0.0.1/2019-11-05--01-initial-schema.sql"/>
+   <include file="db/migrations/v-0.0.1/2019-11-05--02-init-data.sql"/>
 
 </databaseChangeLog>

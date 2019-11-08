@@ -5,7 +5,7 @@ import SimpleSelect from "./SimpleSelect";
 
 const SizePerPage = ({ sizePerPage, options, onChange }) => (
    <SimpleSelect
-      className="clear-both dropdown-width"
+      className="btn btn-sm bg-white dropdown-toggle"
       notClearableOptions
       onChange={(value) => onChange && onChange(value)}
       value={{
