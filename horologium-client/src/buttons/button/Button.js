@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import classNames from 'classnames';
@@ -33,16 +32,4 @@ const Button = ({ id, className, onClick, disabled, href, tooltip, icon, text })
       </a>
    );
 };
-
-Button.propTypes = {
-   href: PropTypes.string,
-   id: PropTypes.string,
-   className: PropTypes.string,
-   tooltip: PropTypes.string,
-   icon: PropTypes.string,
-   disabled: PropTypes.bool,
-   text: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-   onClick: PropTypes.func
-};
-
 export default Button;

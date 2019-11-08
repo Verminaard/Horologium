@@ -9,4 +9,3 @@ build/
 */build/
 node_modules/
 **/app/vendor/
-local-boot.properties

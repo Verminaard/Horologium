@@ -31,7 +31,7 @@ public class DoctorController {
     }
 
     @GetMapping(value = "/{id}/get")
-    public Doctor getDoctorById(@PathVariable String id) throws NotFoundException {
+    public Doctor getLicenseActivity(@PathVariable String id) throws NotFoundException {
         return doctorService.getDoctor(id);
     }
 }

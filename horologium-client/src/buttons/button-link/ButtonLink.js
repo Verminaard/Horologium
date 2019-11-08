@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
@@ -15,15 +14,6 @@ const ButtonLink = ({ id, href, className, tooltip, icon, text }) => {
          )}
       </Link>
    );
-};
-
-ButtonLink.propTypes = {
-   id: PropTypes.string,
-   href: PropTypes.string,
-   className: PropTypes.string,
-   tooltip: PropTypes.string,
-   icon: PropTypes.string,
-   text: PropTypes.string
 };
 
 export default ButtonLink;

@@ -57,7 +57,7 @@ class DoctorViewContainer extends Component {
 
                   <div className="col-md-4 col-xs-12 col-sm-6 col-lg-2">
                      <img src={profile}
-                          className="img-circle profile-img"/>
+                          className="img-circle profile-img" alt="Портрет доктора"/>
                   </div>
 
                   <div className="col-md-8 col-xs-12 col-sm-6 col-lg-8">
